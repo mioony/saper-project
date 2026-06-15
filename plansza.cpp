@@ -176,3 +176,16 @@
         return koniec_gry;
     }
 
+Plansza::Pole Plansza::getPole(int x, int y)//tutaj też getter
+    {
+        return siatka[y][x];
+    }
+int Plansza::getSzerokosc()
+    {
+        return szerokosc;
+    }
+
+int Plansza::getWysokosc()
+    {
+        return wysokosc;
+    }

@@ -13,7 +13,7 @@ public:
         bool odkryte;
         short liczba;
     };
-    
+    Pole getPole(int x, int y);//dodałem getter żebym mogl wziac go do main
 private:
     int szerokosc;
     int wysokosc;
@@ -41,4 +41,7 @@ public:
 
     bool czyKoniecGry();
 
+    int getSzerokosc();
+
+    int getWysokosc();
 };
