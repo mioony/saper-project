@@ -44,4 +44,8 @@ public:
     int getSzerokosc();
 
     int getWysokosc();
+
+    int getIloscMin();//dodalem ilosc min zeby zapamietalo na poszczegolnym poziomie
+
+    bool czyWygrana();
 };

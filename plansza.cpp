@@ -52,6 +52,7 @@
         szerokosc = temp_szerokosc;
         wysokosc = temp_wysokosc;
         ilosc_min = temp_ilosc_min;
+        //postawione_flagi = 0; //dodalem zerownie licznika
         siatka.resize(wysokosc, vector<Pole>(szerokosc));
         ile_pol_zostalo = szerokosc * wysokosc - ilosc_min;
         rozstawMiny();
@@ -189,3 +190,16 @@ int Plansza::getWysokosc()
     {
         return wysokosc;
     }
+
+int Plansza::getIloscMin() //dodalem funkcje do ilosci min
+    {
+        return ilosc_min;
+    }
+bool Plansza::czyWygrana(){
+    // Gra jest wygrana tylko wtedy, gdy się skończyła i nie ma już bezpiecznych pól do odkrycia
+    if (koniec_gry == true && ile_pol_zostalo == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
